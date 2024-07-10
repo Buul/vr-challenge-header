@@ -12369,10 +12369,10 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vr-challenge-ds@^1.0.24:
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/vr-challenge-ds/-/vr-challenge-ds-1.0.24.tgz#92cb8a586a85f5f87eaf5c2676de381305514ee6"
-  integrity sha512-n2Hlj/ooU6a8w93RHhu1qz6eyBobkriFwLtIosN9ctkb9fd4tAQ6l10Txg1EF7eZokAZm0FDqjgV3obCnw2YDQ==
+vr-challenge-ds@^1.0.25:
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/vr-challenge-ds/-/vr-challenge-ds-1.0.25.tgz#ef164db452f0d4dab65950def7f42cfa5d56e58e"
+  integrity sha512-K8SONA8Bu7Zg2xw9uFNE4tXz195OKwYJXfdUaeNlTIq+MEb6N64K+a/Ocl3QUkmLsUm/rXltDzbmFXkYzKjGdg==
   dependencies:
     "@storybook/react" "^6.1.21"
     "@testing-library/react" "^10.4.7"
