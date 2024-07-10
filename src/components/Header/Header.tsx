@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import {
   Button,
@@ -16,22 +15,23 @@ import { ButtonMenu } from '../ButtonMenu/ButtonMenu';
 
 import * as Styled from './Header.styled';
 
-const HeaderComponent: FC<{
-  openModal: boolean;
-  setOpenModal: (openModal: boolean) => void;
-}> = ({ openModal, setOpenModal }) => {
+const HeaderComponent: FC = () => {
+  const [openModal, setOpenModal] = useState(false);
   const [productListSelected, setProductListSelected] = useState<Product[]>([]);
 
-  useEffect(() => {
+  const getProducts = () => {
     const storeProduct = getStoreProducts();
     let newProductList: Product[] = [];
     if (storeProduct) {
       newProductList = JSON.parse(storeProduct) as Product[];
     }
     setProductListSelected(newProductList);
-  }, [openModal]);
+  };
 
-  const handleClick = () => setOpenModal(true);
+  const handleClick = () => {
+    setOpenModal(true);
+    getProducts();
+  };
 
   return (
     <ThemeProvider theme={ThemeDefault}>
