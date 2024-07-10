@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import styled from 'styled-components';
+import { breakpoints } from 'vr-challenge-ds';
 
 export const Wrapper = styled.header`
   width: 100%;
@@ -14,6 +16,12 @@ export const Wrapper = styled.header`
 export const ModalWrapper = styled.div`
   width: 500px;
   padding: 0 80px 0 56px;
+
+  @media (max-width: ${breakpoints.md}) {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
 `;
 
 export const ModalHeader = styled.div`
