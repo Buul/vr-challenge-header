@@ -3,26 +3,15 @@ import { describe, expect, vi } from 'vitest';
 import { ThemeDefault } from 'vr-challenge-ds';
 
 import Header from './Header';
-import { HeaderProps } from './Header.types';
 
-const builder = (
-  props: HeaderProps = { onClickMenu: () => {} }
-): HeaderProps => ({
-  ...props,
-});
-
-const setup = (props = { headerProps: builder() }) => {
-  const { headerProps } = props;
+const setup = () => {
   const onClick = vi.fn();
 
-  const renderResult = render(
-    <Header {...headerProps} onClickMenu={onClick} />
-  );
+  const renderResult = render(<Header />);
   const headerElement = renderResult.getByTestId('header');
 
   return {
     headerElement,
-    headerProps,
     onClick,
     ...renderResult,
   };
@@ -30,9 +19,7 @@ const setup = (props = { headerProps: builder() }) => {
 
 describe('Header', () => {
   test('should render Header', async () => {
-    const { headerElement, container } = setup({
-      headerProps: { onClickMenu: () => {} },
-    });
+    const { headerElement, container } = setup();
 
     expect(headerElement).toBeInTheDocument();
     expect(container.firstChild).toHaveStyle({
